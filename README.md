@@ -18,9 +18,9 @@ Or install it yourself as:
 
     $ gem install fakename_wrapper
 
-## Usage
+## Configuration
 
-### Constructor Params
+Constructor params
 
 | Param |          Available          |         Default         |
 |:------:|:---------------------:|:---------------------------:|
@@ -30,19 +30,34 @@ Or install it yourself as:
 
 ### Example
 
-Configuration
-
 ```ruby
 # Initialize the Scraper with no params for use the defaults 
 person = FakenameWrapper::Scraper.new.parse
 
-# Or pass the available params to configure the desired data
+# Or pass one or more available param to configure the desired data
 person = FakenameWrapper::Scraper.new(gender: female, country: br, name_set:br).parse
 ```
+
+## Usage
+
+Available methods for a retrieved `FakenameWrapper::Person`
+
+| Method |          Description          |
+|:------:|:---------------------:|
+|   name  |     The person full name    |
+|   ssn  |     The person SSN (Or CPF for Brazilians)    |
+|   street  |     The person street    |
+|   location  |     The person location, city and state    |
+|   zip  |     The person zip code    |
+|   full_address  |     The person full address, including street, location and zip code.    |
+
+### Example
 
 Bellow are the available methods for a retrieved person
 
 ```ruby
+person = FakenameWrapper::Scraper.new.parse
+
 person.name
 person.ssn
 person.street
