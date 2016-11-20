@@ -1,5 +1,8 @@
 # FakenameWrapper
 
+[![Build Status](https://travis-ci.org/gustavosobral/fakename_wrapper.svg?branch=master)](https://travis-ci.org/gustavosobral/fakename_wrapper)
+[![Coverage Status](https://coveralls.io/repos/github/gustavosobral/fakename_wrapper/badge.svg?branch=master)](https://coveralls.io/github/gustavosobral/fakename_wrapper?branch=master)
+
 This gem aims to be a simple data generator, providing specific generated data by countries for multiple purposes (Tests, database seeds and etc).
 Currently, is a simple wrapper based on http://www.fakenamegenerator.com/ service.
 
