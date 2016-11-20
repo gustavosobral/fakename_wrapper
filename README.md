@@ -4,7 +4,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/gustavosobral/fakename_wrapper/badge.svg?branch=master)](https://coveralls.io/github/gustavosobral/fakename_wrapper?branch=master)
 
 This gem aims to be a simple data generator, providing specific generated data by countries for multiple purposes (Tests, database seeds and etc).
-Currently, is a simple wrapper based on http://www.fakenamegenerator.com/ service.
+
+Currently, is a simple wrapper based on http://www.fakenamegenerator.com/ service. Can be expanded to other fonts and services later.
 
 ## Installation
 
@@ -78,6 +79,7 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 * Allow to use cached option;
 * Use VCR gem for specs;
+* Expand to other fonts and services;
 
 ## Contributing
 
