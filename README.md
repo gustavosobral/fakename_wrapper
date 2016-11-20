@@ -1,6 +1,7 @@
 # FakenameWrapper
 
-A simple wrapper to generate User specific data based on http://www.fakenamegenerator.com/ service
+This gem aims to be a simple data generator, providing specific generated data by countries for multiple purposes (Tests, database seeds and etc).
+Currently, is a simple wrapper based on http://www.fakenamegenerator.com/ service.
 
 ## Installation
 

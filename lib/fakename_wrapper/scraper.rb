@@ -8,6 +8,7 @@ module FakenameWrapper
       @document = Nokogiri::HTML(open("http://www.fakenamegenerator.com/gen-#{gender}-#{name_set}-#{country}.php"))
     end
 
+    # Parse the document
     def parse
       name = @document.xpath("//*[@id='details']/div[2]/div[2]/div/div[1]/h3").first.content
       ssn = @document.xpath("//*[@id='details']/div[2]/div[2]/div/div[2]/dl[2]/dd").first.content.split(' ')[0]
@@ -20,6 +21,7 @@ module FakenameWrapper
 
     private
 
+    # Parse the address document returning the street, location and zip code
     def parse_address
       addr = @document.xpath("//*[@id='details']/div[2]/div[2]/div/div[1]/div").to_s.split('<br>')
       addr[0].slice! "<div class=\"adr\">\n"

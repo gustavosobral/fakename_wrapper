@@ -3,14 +3,15 @@ module FakenameWrapper
     attr_accessor :name, :ssn, :street, :location, :zip, :phone
 
     def initialize(params = {})
-      @name = params[:name]
-      @ssn = params[:ssn]
-      @street = params[:street]
+      @name     = params[:name]
+      @ssn      = params[:ssn]
+      @street   = params[:street]
       @location = params[:location]
-      @zip = params[:zip]
-      @phone = params[:phone]
+      @zip      = params[:zip]
+      @phone    = params[:phone]
     end
 
+    # Return the full formatted Person address
     def full_address
       address = "#{@street}, #{@location}"
       address << ", #{@zip}" if @zip
