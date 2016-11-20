@@ -20,10 +20,35 @@ Or install it yourself as:
 
 ## Usage
 
+### Constructor Params
+
+| Param |          Available          |         Default         |
+|:------:|:---------------------:|:---------------------------:|
+|   gender  |     :random, :male, :female    | :random |
+|   country  |     :br    | :br |
+|   name_set  |     :br    | :br |
+
+### Example
+
+Configuration
+
 ```ruby
-person = FakenameWrapper::Scraper.new(gender: :male, country: :br, name_set: :br).parse
+# Initialize the Scraper with no params for use the defaults 
+person = FakenameWrapper::Scraper.new.parse
+
+# Or pass the available params to configure the desired data
+person = FakenameWrapper::Scraper.new(gender: female, country: br, name_set:br).parse
+```
+
+Bellow are the available methods for a retrieved person
+
+```ruby
 person.name
-person.cpf
+person.ssn
+person.street
+person.location
+person.zip
+person.full_address
 ```
 
 ## Development
