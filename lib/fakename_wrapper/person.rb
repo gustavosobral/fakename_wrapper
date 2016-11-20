@@ -12,7 +12,9 @@ module FakenameWrapper
     end
 
     def full_address
-      "#{@street}, #{@location}, #{@zip}"
+      address = "#{@street}, #{@location}"
+      address << ", #{@zip}" if @zip
+      address
     end
   end
 end

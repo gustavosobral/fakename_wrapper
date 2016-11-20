@@ -53,8 +53,8 @@ Constructor params
 | Param |          Available          |         Default         |
 |:------:|:---------------------:|:---------------------------:|
 |   gender  |     :random, :male, :female    | :random |
-|   country  |     :br    | :br |
-|   name_set  |     :br    | :br |
+|   country  |     :br, :us    | :br |
+|   name_set  |     :br, :us    | :br |
 
 ### Example
 
@@ -70,9 +70,14 @@ person = FakenameWrapper::Scraper.new(gender: :female, country: :br, name_set: :
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
+### To-do
+
+* Allow to use cached option;
+* Use VCR gem for specs;
+
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/fakename_wrapper.
+Bug reports and pull requests are welcome on GitHub at https://github.com/gustavosobral/fakename_wrapper.
 
 ## License
 
