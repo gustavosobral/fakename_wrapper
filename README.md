@@ -32,6 +32,8 @@ person.full_address
 person.phone
 ```
 
+Check the `examples` folder to see executables Ruby code using the FakenameWrapper gem.
+
 Full available data/methods for a retrieved `FakenameWrapper::Person`
 
 | Method |          Description          |
