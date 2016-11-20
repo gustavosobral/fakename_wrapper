@@ -1,6 +1,6 @@
 module FakenameWrapper
   class Person
-    attr_accessor :name, :ssn, :street, :location, :zip
+    attr_accessor :name, :ssn, :street, :location, :zip, :phone
 
     def initialize(params = {})
       @name = params[:name]
@@ -8,6 +8,7 @@ module FakenameWrapper
       @street = params[:street]
       @location = params[:location]
       @zip = params[:zip]
+      @phone = params[:phone]
     end
 
     def full_address

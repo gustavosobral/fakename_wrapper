@@ -18,6 +18,32 @@ Or install it yourself as:
 
     $ gem install fakename_wrapper
 
+## Usage
+
+```ruby
+# Initialize the Scraper
+person = FakenameWrapper::Scraper.new.parse
+
+# Access the data
+person.name
+person.ssn
+person.location
+person.full_address
+person.phone
+```
+
+Full available data/methods for a retrieved `FakenameWrapper::Person`
+
+| Method |          Description          |
+|:------:|:---------------------:|
+|   name  |     The person full name    |
+|   ssn  |     The person SSN (Or CPF for Brazilians)    |
+|   street  |     The person street    |
+|   location  |     The person location, city and state    |
+|   zip  |     The person zip code    |
+|   full_address  |     The person full address, including street, location and zip code    |
+|   phone  |     The person phone    |
+
 ## Configuration
 
 Constructor params
@@ -35,35 +61,7 @@ Constructor params
 person = FakenameWrapper::Scraper.new.parse
 
 # Or pass one or more available param to configure the desired data
-person = FakenameWrapper::Scraper.new(gender: female, country: br, name_set:br).parse
-```
-
-## Usage
-
-Available methods for a retrieved `FakenameWrapper::Person`
-
-| Method |          Description          |
-|:------:|:---------------------:|
-|   name  |     The person full name    |
-|   ssn  |     The person SSN (Or CPF for Brazilians)    |
-|   street  |     The person street    |
-|   location  |     The person location, city and state    |
-|   zip  |     The person zip code    |
-|   full_address  |     The person full address, including street, location and zip code.    |
-
-### Example
-
-Bellow are the available methods for a retrieved person
-
-```ruby
-person = FakenameWrapper::Scraper.new.parse
-
-person.name
-person.ssn
-person.street
-person.location
-person.zip
-person.full_address
+person = FakenameWrapper::Scraper.new(gender: :female, country: :br, name_set: :br).parse
 ```
 
 ## Development
@@ -74,8 +72,6 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/fakename_wrapper.
 
-
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
